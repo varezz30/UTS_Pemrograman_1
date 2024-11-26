@@ -1,0 +1,702 @@
+/* Menyusun gaya untuk body dengan latar belakang bergerak */
+body {
+    background: 
+      linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5)),
+      url("../assets/images/cyberpunk-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Pastikan body mengambil setidaknya tinggi layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Memastikan footer tetap di bawah */
+    animation: backgroundAnimation 30s linear infinite, colorAnimation 10s linear infinite; /* Animasi background dan warna */
+    transition: background 0.5s ease-in-out; /* Efek transisi pada perubahan background */
+  }
+  
+  /* Animasi untuk background bergerak */
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Animasi untuk warna bergerak */
+  @keyframes colorAnimation {
+    0% {
+      background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    }
+    50% {
+      background: linear-gradient(45deg, rgba(0, 255, 150, 0.5), rgba(255, 0, 204, 0.5));
+    }
+    100% {
+      background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    }
+  }
+  
+  /* Styling untuk konten utama */
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    z-index: 1; /* Pastikan konten berada di atas background */
+    animation: fadeIn 2s ease-out; /* Efek fade-in pada konten */
+  }
+  
+  /* Animasi Fade-In untuk konten */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Efek Hover untuk tombol */
+  button:hover {
+    transform: scale(1.1); /* Memperbesar tombol */
+    background-color: #28a745; /* Mengubah warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Efek Hover untuk link */
+  a:hover {
+    color: #ff6347; /* Mengubah warna link */
+    text-decoration: underline; /* Menambahkan garis bawah pada link */
+  }
+  
+  /* Efek Shadow pada elemen */
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow normal */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Shadow saat hover */
+    transform: translateY(-5px); /* Efek angkat elemen */
+  }
+  
+  /* Footer styling */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Efek transisi pada perubahan warna footer */
+  }
+  
+  footer:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Menggelapkan footer saat hover */
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 576px) {
+    .container {
+      margin-top: 20px;
+      padding: 15px;
+    }
+  }
+  
+  /* Animasi untuk teks yang bergerak (typing effect) */
+  .typing {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #ff6347; /* Membuat kursor mengetik */
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Efek Parallax untuk latar belakang */
+  .parallax {
+    background-image: url("../assets/images/parallax-background.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Efek Glowing pada teks */
+  .glowing-text {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    100% {
+      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    }
+  }
+  
+  /* Efek Bouncing pada elemen */
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Efek Shake pada elemen */
+  .shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
+  /* Efek slide masuk */
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Efek Fade-in pada elemen saat scroll */
+  .fade-in-scroll {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .fade-in-scroll.visible {
+    opacity: 1;
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 10px;
+      padding: 20px;
+    }
+  
+    footer {
+      font-size: 12px;
+    }
+  }css
+  /* Menyusun gaya untuk body dengan latar belakang bergerak */
+  body {
+    background: 
+      linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5)),
+      url("../assets/images/cyberpunk-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Pastikan body mengambil setidaknya tinggi layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Memastikan footer tetap di bawah */
+    animation: backgroundAnimation 30s linear infinite, colorAnimation 10s linear infinite; /* Animasi background dan warna */
+    transition: background 0.5s ease-in-out; /* Efek transisi pada perubahan background */
+  }
+  
+  /* Animasi untuk background bergerak */
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Animasi untuk warna bergerak */
+  @keyframes colorAnimation {
+    0% {
+      background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    }
+    50% {
+      background: linear-gradient(45deg, rgba(0, 255, 150, 0.5), rgba(255, 0, 204, 0.5));
+    }
+    100% {
+      background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    }
+  }
+  
+  /* Styling untuk konten utama */
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    z-index: 1; /* Pastikan konten berada di atas background */
+    animation: fadeIn 2s ease-out; /* Efek fade-in pada konten */
+  }
+  
+  /* Animasi Fade-In untuk konten */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Efek Hover untuk tombol */
+  button:hover {
+    transform: scale(1.1); /* Memperbesar tombol */
+    background-color: #28a745; /* Mengubah warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Efek Hover untuk link */
+  a:hover {
+    color: #ff6347; /* Mengubah warna link */
+    text-decoration: underline; /* Menambahkan garis bawah pada link */
+  }
+  
+  /* Efek Shadow pada elemen */
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow normal */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Shadow saat hover */
+    transform: translateY(-5px); /* Efek angkat elemen */
+  }
+  
+  /* Footer styling */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Efek transisi pada perubahan warna footer */
+  }
+  
+  footer:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Menggelapkan footer saat hover */
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 576px) {
+    .container {
+      margin-top: 20px;
+      padding: 15px;
+    }
+  }
+  
+  /* Animasi untuk teks yang bergerak (typing effect) */
+  .typing {
+    font-size: 24px;
+  white-space: nowrap; /* Memastikan teks tidak membungkus */
+  overflow: hidden; /* Menyembunyikan teks yang melampaui batas */
+  border-right: 4px solid #ff6347; /* Membuat kursor mengetik */
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animasi mengetik dan berkedip */;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Efek Parallax untuk latar belakang */
+  .parallax {
+    background-image: url("../assets/images/parallax-background.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Efek Glowing pada teks */
+  .glowing-text {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    100% {
+      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    }
+  }
+  
+  /* Efek Bouncing pada elemen */
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Efek Shake pada elemen */
+  .shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
+  /* Efek slide masuk */
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Efek Fade-in pada elemen saat scroll */
+  .fade-in-scroll {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .fade-in-scroll.visible {
+    opacity: 1;
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 10px;
+      padding: 20px;
+    }
+  
+    footer {
+      font-size: 12px;
+    }
+  }css
+  /* Menyusun gaya untuk body dengan latar belakang bergerak */
+  body {
+    background: 
+      linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5)),
+      url("../assets/images/cyberpunk-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Pastikan body mengambil setidaknya tinggi layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Memastikan footer tetap di bawah */
+    animation: backgroundAnimation 30s linear infinite, colorAnimation 10s linear infinite; /* Animasi background dan warna */
+    transition: background 0.5s ease-in-out; /* Efek transisi pada perubahan background */
+  }
+  
+  /* Animasi untuk background bergerak */
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Animasi untuk warna bergerak */
+  @keyframes colorAnimation {
+    0% {
+      background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    }
+    50% {
+      background: linear-gradient(45deg, rgba(0, 255, 150, 0.5), rgba(255, 0, 204, 0.5));
+    }
+    100% {
+      background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+    }
+  }
+  
+  /* Styling untuk konten utama */
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    z-index: 1; /* Pastikan konten berada di atas background */
+    animation: fadeIn 2s ease-out; /* Efek fade-in pada konten */
+  }
+  
+  /* Animasi Fade-In untuk konten */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Efek Hover untuk tombol */
+  button:hover {
+    transform: scale(1.1); /* Memperbesar tombol */
+    background-color: #28a745; /* Mengubah warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Efek Hover untuk link */
+  a:hover {
+    color: #ff6347; /* Mengubah warna link */
+    text-decoration: underline; /* Menambahkan garis bawah pada link */
+  }
+  
+  /* Efek Shadow pada elemen */
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow normal */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Shadow saat hover */
+    transform: translateY(-5px); /* Efek angkat elemen */
+  }
+  
+  /* Footer styling */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Efek transisi pada perubahan warna footer */
+  }
+  
+  footer:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Menggelapkan footer saat hover */
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 576px) {
+    .container {
+      margin-top: 20px;
+      padding: 15px;
+    }
+  }
+  
+  /* Animasi untuk teks yang bergerak (typing effect) */
+  .typing {
+    font-size: 24px;
+  white-space: nowrap; /* Memastikan teks tidak membungkus */
+  overflow: hidden; /* Menyembunyikan teks yang melampaui batas */
+  border-right: 4px solid #ff6347; /* Membuat kursor mengetik */
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animasi mengetik dan berkedip */
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Efek Parallax untuk latar belakang */
+  .parallax {
+    background-image: url("../assets/images/parallax-background.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Efek Glowing pada teks */
+  .glowing-text {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    100% {
+      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    }
+  }
+  
+  /* Efek Bouncing pada elemen */
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Efek Shake pada elemen */
+  .shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
+  /* Efek slide masuk */
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Efek Fade-in pada elemen saat scroll */
+  .fade-in-scroll {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .fade-in-scroll.visible {
+    opacity: 1;
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 10px;
+      padding: 20px;
+    }
+  
+    footer {
+      font-size: 12px;
+    }
+  }

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Utama - Kedokteran</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Custom CSS for styling -->
+    <style>
+      /* CSS yang telah dimodifikasi seperti di atas */
+      body {
+        background-color: #f4f7fa;
+        font-family: "Arial", sans-serif;
+        padding-bottom: 80px; /* Memberikan ruang di bagian bawah halaman untuk footer */
+        position: relative; /* Mengatur posisi relatif untuk body */
+      }
+
+      footer {
+        background-color: #34495e;
+        color: white;
+        padding: 20px 0;
+        text-align: center; /* Menambahkan teks agar footer tetap berada di tengah */
+        position: absolute; /* Mengatur posisi footer agar tetap di bawah */
+        bottom: 0; /* Menempatkan footer di bagian bawah */
+        left: 0;
+        right: 0; /* Membuat footer memenuhi lebar halaman */
+      }
+
+      h1 {
+        color: #2c3e50;
+        font-weight: bold;
+      }
+
+      .btn-custom {
+        background-color: #e74c3c;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+
+      .btn-custom:hover {
+        background-color: #c0392b;
+      }
+
+      .list-group-item {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .list-group-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .list-group-item a {
+        font-weight: bold;
+        color: #2980b9;
+        text-decoration: none;
+      }
+
+      .list-group-item a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        margin-top: 40px;
+        margin-bottom: 40px; /* Memberikan ruang agar konten tidak terlalu dekat dengan footer */
+      }
+
+      .card {
+        margin-top: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-header {
+        background-color: #3498db;
+        color: white;
+        border-radius: 15px 15px 0 0;
+        font-weight: bold;
+      }
+
+      .card-body {
+        background-color: #ecf0f1;
+      }
+
+      .card-body p {
+        font-size : 16px;
+      }
+
+      .card-footer {
+        background-color: #ecf0f1;
+        border-radius: 0 0 15px 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5">Selamat Datang di Portal Kedokteran</h1>
+      <p class="text-center">
+        Temukan berbagai informasi dan layanan kesehatan yang kami sediakan.
+      </p>
+      <p class="text-center">
+        Pilih kategori di bawah untuk mendapatkan informasi lebih lanjut.
+      </p>
+
+      <!-- Tombol Kembali ke Login -->
+      <div class="text-center">
+        <a href="login.html" class="btn btn-custom mb-3">Kembali ke Login</a>
+      </div>
+
+      <!-- Kartu Informasi -->
+      <div class="card">
+        <div class="card-header">Informasi Kedokteran Terbaru</div>
+        <div class="card-body">
+          <p>
+            Dapatkan berbagai artikel, pengumuman, dan informasi terkait
+            kesehatan dan kedokteran yang penting untuk Anda.
+          </p>
+        </div>
+        <div class="card-footer text-right">
+          <a href="informasi1.html" class="btn btn-custom"
+            >Lihat Selengkapnya</a
+          >
+        </div>
+      </div>
+
+      <!-- List Group -->
+      <ul class="list-group mt-4">
+        <li class="list-group-item">
+          <a href="informasi2.html"
+            >Informasi 1: Layanan Kesehatan Masyarakat</a
+          >
+          <p class="mb-0">
+            Pelajari tentang layanan kesehatan yang tersedia untuk masyarakat,
+            seperti vaksinasi dan pemeriksaan rutin.
+          </p>
+        </li>
+        <li class="list-group-item">
+          <a href="informasi3.html">Informasi 2: Penyakit dan Pengobatan</a>
+          <p class="mb-0">
+            Cari tahu lebih banyak tentang penyakit umum dan cara pengobatannya
+            dari dokter profesional.
+          </p>
+        </li>
+        <li class="list-group-item">
+          <a href="informasi4.html">Informasi 3: Kesehatan Mental</a>
+          <p class="mb-0">
+            Mendalami pentingnya menjaga kesehatan mental dan tips dari ahli
+            psikologi.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>@Copyright by 22552011206_Mochamad Alphareza Juandi_TIFRP22CNS_UTB</p>
+    </footer>
+  </body>
+</html>
